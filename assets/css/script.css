@@ -1,0 +1,29 @@
+.hero{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/ReelRec\ Background.jpg);
+    background-size: cover;
+    background-position: 0 -725px;
+}
+
+
+
+.about{
+    width: 100px;
+    padding: 100px 0px;
+    background-color: #191919;
+    height: 100vh;
+}
+.main{
+    width: 100vw;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+.about img{
+    height: auto;
+    width: 430px;
+}
