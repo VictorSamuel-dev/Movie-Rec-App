@@ -1,29 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReelRecs</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ReelRecs</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+   <link rel="stylesheet" type="text/css" href="./assets/css/script.css">
 </head>
+
 <body>
-    <div class="hero">
-        <nav>
-           <h2 class="logo">Reel<span>Recs</span></h2>
-           <ul>
-        </nav>
-     </div>
-    <section class="about" id="about">
-        <div class="main">
-           <img src="./assets/images/ReelRec Background.jpg">
-           <div class="about-text">
-              <h2></h2>
-              <h5><span></span></h5>
-              <p></p>
-              <button type="button"></button>
-           </div>
-        </div>
-     </section>
-    
+   <header>
+      <nav class="#" id="icon">
+         <div class="hero">
+            <nav>
+               <h2 class="logo">Reel<span>Recs</span></h2>
+               <ul>
+            </nav>
+         </div>
+         <div class="field has-addons">
+            <div class="control">
+               <input class="input" type="text" placeholder="Search Movies">
+            </div>
+            <div class="control">
+               <a class="button is-info">
+
+               </a>
+            </div>
+         </div>
+         <div class="select is-rounded">
+            <select>
+               <option>Top Genres</option>
+               <option>Action</option>
+               <option>Comedy</option>
+               <option>Drama</option>
+               <option>Horror</option>
+               <option>Horror</option>
+            </select>
+         </div>
+      </nav>
+   </header>
+   <section class="section is-large">
+      <h2 class="title">Overall Top Movie</h2>
+      <h3 class="subtitle">
+         An overview of top rated <strong>ReelRecs</strong>, at your fingertips.
+      </h3>
+      <div id="form">
+         <div class="carousel" id="slider">
+            <div class="card">
+               <div class="columns is-mobile">
+                  <div class="column is-half is-offset-one-quarter">Genre Name</div>
+               </div>
+
+               <div class="columns is-mobile">
+                  <div class="column is-three-fifths is-offset-one-fifth">Movie Name</div>
+               </div>
+
+               <div class="columns is-mobile">
+                  <div class="column is-4 is-offset-8">Image of Movie/API Plugin</div>
+               </div>
+
+               <div class="columns is-mobile">
+                  <div class="column is-11 is-offset-1">See More</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </h2>
+   </section>
+
+
+
+   <footer class="footer">
+      <div class="content has-text-centered">
+         <p>
+            <strong>ReelRecs</strong> by <a href="https://jgthms.com">Group 3 Footer</a>.
+         </p>
+      </div>
+   </footer>
+   <script src="./assets/js/script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
 </body>
+
 </html>
