@@ -1,32 +1,33 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-
-body {
-    font-family: 'Poppins', sans-serif;;
-}
-.columns {
-    border: 2px solid black;
+header {
+    background-color: #0074D9; /* Adjust the background color as needed */
+    color: #fff; /* Adjust the text color as needed */
+    padding: 10px;
 }
 
-/* .hero{
-    height: 100vh;
-    width: 100vw;
-    background-image: url(../images/ReelRec\ Background.jpg);
-    background-size: cover;
-    background-position: 0 -725px;
-} */
-
-
-#slider .card-content{
-    max-width: 50%;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-#slider{
-    overflow: hidden;
+
+/* Style the "ReelRecs" logo */
+h2.logo {
+    font-size: 36px; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin: 0;
 }
-@media screen and (max-width: 1023px) {
-    #slider .card-content{
-        display: none;
-    }
-    
+
+/* Style the search bar and top genres dropdown */
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+.field.has-addons {
+    margin-right: 10px;
+}
+
+.select.is-rounded {
+    width: 150px; /* Adjust the width as needed */
+    margin-right: 10px; /* Add some spacing to separate it from the search bar */
 }
