@@ -79,13 +79,14 @@ document.addEventListener("keydown", (event) => {
 // });
 
 function modalDisplay(movieData) {
-    var movie = movieInput.value;
+    var movie = movieData.Title;
     movieTitle.innerText = "";
     movieTitle.innerText = movieData.title
 
-    moviePlotShort = "https://www.omdbapi.com/?apikey=" + omdbAPI + "&t=" + movie + "&plot=short&r=json";
+    moviePlotShort = "https://www.omdbapi.com/?apikey=" + omdbAPI + "&t=" + movie;
 
 
+    // not complete - only pulls initial search plot
     fetch(moviePlotShort)
         .then(function (response) {
             console.log(response);
@@ -94,11 +95,14 @@ function modalDisplay(movieData) {
             }
             return response.json();
         })
-        .then(function () {
-
+        .then(function (data) {
+            var moviePlotShort = data.Plot;
             moviePlot.innerText = "";
-            moviePlot.innerText = movieData.plot
+            moviePlot.innerText = moviePlotShort;
         })
+        .catch(function (error) {
+            console.error("Error fetching movie data:", error);
+        });
 
     
 };
