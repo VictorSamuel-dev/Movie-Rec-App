@@ -20,10 +20,10 @@
          <div class="header-controls">
             <div class="field has-addons">
                <div class="control">
-                  <input class="input" type="text" placeholder="Search Movies">
+                  <input class="input" type="text" placeholder="Search Movies" id="movie-input">
                </div>
                <div class="control">
-                  <a class="button is-info">Search</a>
+                  <a class="button is-info" id="search-button">Search</a>
                </div>
             </div>
          <div class="select is-rounded">
@@ -38,23 +38,22 @@
          </div>
       </nav>
    </header>
-   <div class="movie-container">
+   <div id="movie-container">
 
    </div>
-   <div class="modal">
+
+
+   <div class="modal" id="modal-card">
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
-          <p class="modal-card-title">Modal title</p>
+          <p class="modal-card-title" id="modal-title"></p>
           <button class="delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
           <!-- Content ... -->
+          <p id="movie-plot"></p>
         </section>
-        <footer class="modal-card-foot">
-          <button class="button is-success">Save changes</button>
-          <button class="button">Cancel</button>
-        </footer>
       </div>
     </div>
 
