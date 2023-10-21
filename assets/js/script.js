@@ -2,6 +2,7 @@
 // nick tmdb api key: 2ed376b49026ee5ba769954152774c28
 // madison youtube api key:
 
+
 var tmdbAPI = "2ed376b49026ee5ba769954152774c28";
 var ytAPI = "AIzaSyBWrhCB3guqUxUZxZX8HvCsGdb9BwsCyU0";
 var movieSearchButton = document.getElementById("search-button");
@@ -230,5 +231,3 @@ movieSearchButton.addEventListener("click", function () {
     });
 });
 
-
-// TEST COMMENT
