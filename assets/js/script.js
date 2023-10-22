@@ -1,6 +1,8 @@
 // nick youtube api key: AIzaSyBWrhCB3guqUxUZxZX8HvCsGdb9BwsCyU0
 // nick tmdb api key: 2ed376b49026ee5ba769954152774c28
 // madison youtube api key:
+// victor youtube api key: AIzaSyDjoFhFJosMUmPbXNBr0L87PtX4_I4PJYk
+//victor tmdb api key: f1af2709945a3588fa0ae7c5d3f25da8
 
 
 var tmdbAPI = "2ed376b49026ee5ba769954152774c28";
