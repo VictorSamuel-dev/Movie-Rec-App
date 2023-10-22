@@ -1,8 +1,12 @@
 // nick youtube api key: AIzaSyBWrhCB3guqUxUZxZX8HvCsGdb9BwsCyU0
 // nick tmdb api key: 2ed376b49026ee5ba769954152774c28
+<<<<<<< HEAD
 // madison youtube api key:
 // victor youtube api key: AIzaSyDjoFhFJosMUmPbXNBr0L87PtX4_I4PJYk
 //victor tmdb api key: f1af2709945a3588fa0ae7c5d3f25da8
+=======
+// madison youtube api key:AIzaSyBOVuYX_z7sZzI8Ehjp-EJIUBd2qdpztK0
+>>>>>>> 77baae8a922ec690d631c97a39012b00ba18ba54
 
 
 var tmdbAPI = "2ed376b49026ee5ba769954152774c28";
@@ -15,6 +19,7 @@ var modalCard = document.getElementById("modal-card");
 var movieTitle = document.getElementById("movie-title");
 var moviePlot = document.getElementById("movie-plot");
 var movieImg = '../assets/images/dummy.png'
+var genreCard = document.getElementById("genre-container")
 
 // Function to open a modal
 function openModal($el) {
@@ -96,6 +101,11 @@ function modalDisplay(modalData) {
 }
 
 movieSearchButton.addEventListener("click", function () {
+
+  if (genreCard) {
+    genreCard.style.display = "none";
+  }
+
   // user's input from search
   var movieInputValue = movieInput.value;
 
