@@ -5,6 +5,7 @@
 //victor tmdb api key: f1af2709945a3588fa0ae7c5d3f25da8
 
 
+
 var tmdbAPI = "2ed376b49026ee5ba769954152774c28";
 var ytAPI = "AIzaSyBWrhCB3guqUxUZxZX8HvCsGdb9BwsCyU0";
 var movieSearchButton = document.getElementById("search-button");
@@ -14,6 +15,8 @@ var modalVideo = document.getElementById("video-container");
 var modalCard = document.getElementById("modal-card");
 var movieTitle = document.getElementById("movie-title");
 var moviePlot = document.getElementById("movie-plot");
+var movieImg = '../assets/images/dummy.png'
+var genreCard = document.getElementById("genre-container")
 
 // Function to open a modal
 function openModal($el) {
@@ -95,6 +98,11 @@ function modalDisplay(modalData) {
 }
 
 movieSearchButton.addEventListener("click", function () {
+
+  if (genreCard) {
+    genreCard.style.display = "none";
+  }
+
   // user's input from search
   var movieInputValue = movieInput.value;
 
@@ -123,6 +131,14 @@ movieSearchButton.addEventListener("click", function () {
 
         var posterBaseURL = "https://image.tmdb.org/t/p/w200";
         var moviePosterURL = posterBaseURL + moviePoster;
+        var img = document.createElement('img')
+        img.src = moviePosterURL 
+        img.alt = movieTitle
+        img.onerror = function() {
+          this.src = movieImg
+        }
+        
+
 
         var modalData = {
           title: movieTitle,
@@ -232,4 +248,3 @@ movieSearchButton.addEventListener("click", function () {
       });
     });
 });
-

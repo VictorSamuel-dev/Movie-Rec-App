@@ -26,45 +26,37 @@
                   <a class="button is-info" id="search-button">Search</a>
                </div>
             </div>
-         <!-- <div class="select is-rounded">
-            <select>
-               <option>Top Genres</option>
-               <option>Action</option>
-               <option>Comedy</option>
-               <option>Drama</option>
-               <option>Horror</option>
-               <option>Romance</option>
-            </select>
-         </div> -->
       </nav>
    </header>
-   <h1>Top Movies by Genre</h1>
+   
+   <div id="genre-container">
+      <h1>Top Movies by Genre</h1>
+   
+      <div id="action" >
+         <h2>Action</h2>
+         <ul id="action-movies" class="movie-list"></ul>
+      </div>
 
-   <div id="action" class="genre-container">
-        <h2>Action</h2>
-        <ul id="action-movies" class="movie-list"></ul>
+      <div id="comedy">
+         <h2>Comedy</h2>
+         <ul id="action-movies" class="movie-list"></ul>
+      </div>
+
+      <div id="drama">
+         <h2>Drama</h2>
+         <ul id="action-movies" class="movie-list"></ul>
+      </div>
+
+      <div id="horror">
+         <h2>Horror</h2>
+         <ul id="action-movies" class="movie-list"></ul>
+      </div>
+
+      <div id="romance">
+         <h2>Romance</h2>
+         <ul id="action-movies" class="movie-list"></ul>
+      </div>
    </div>
-
-   <div id="comedy" class="genre-container">
-      <h2>Comedy</h2>
-      <ul id="action-movies" class="movie-list"></ul>
-   </div>
-
-   <div id="drama" class="genre-container">
-      <h2>Drama</h2>
-      <ul id="action-movies" class="movie-list"></ul>
-   </div>
-
-   <div id="horror" class="genre-container">
-      <h2>Horror</h2>
-      <ul id="action-movies" class="movie-list"></ul>
-   </div>
-
-   <div id="romance" class="genre-container">
-      <h2>Romance</h2>
-      <ul id="action-movies" class="movie-list"></ul>
-  </div>
-
 
    <div id="movie-container">
 
@@ -91,12 +83,11 @@
    <footer class="footer">
       <div class="content has-text-centered">
          <p>
-            <strong>ReelRecs</strong> by <a>Group 3</a>.
+            <strong>ReelRecs</strong> by <a>Victor, Nick, Madison, and Christian</a>.
          </p>
       </div>
    </footer>
    <script src="./assets/js/script.js"></script>
-   <script src="./assets/js/genre.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="https://www.googleapis.com/youtube/v3/"></script>
    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
