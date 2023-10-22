@@ -14,6 +14,7 @@ var modalVideo = document.getElementById("video-container");
 var modalCard = document.getElementById("modal-card");
 var movieTitle = document.getElementById("movie-title");
 var moviePlot = document.getElementById("movie-plot");
+// var movieImg = '../assets/images/dummy.png'
 
 // Function to open a modal
 function openModal($el) {
@@ -123,6 +124,14 @@ movieSearchButton.addEventListener("click", function () {
 
         var posterBaseURL = "https://image.tmdb.org/t/p/w200";
         var moviePosterURL = posterBaseURL + moviePoster;
+        // var img = document.createElement('img')
+        // img.src = moviePosterURL 
+        // img.alt = movieTitle
+        // img.onerror = function() {
+        //   this.src = movieImg
+        // }
+        
+
 
         var modalData = {
           title: movieTitle,
@@ -139,7 +148,7 @@ movieSearchButton.addEventListener("click", function () {
             <div class="card">
               <div class="card-header js-modal-trigger" data-target="modal-card">${movieTitle}</div>
               <div class="card-body">
-                <p class="moviePoster"> <img src="${moviePosterURL}" alt="${movieTitle} Poster"></p>
+                <p class="moviePoster"> src="${moviePosterURL}" alt="${movieTitle} Poster"></p>
               </div>
             </div>
           </div>
@@ -232,4 +241,3 @@ movieSearchButton.addEventListener("click", function () {
       });
     });
 });
-
