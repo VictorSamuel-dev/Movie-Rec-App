@@ -230,4 +230,3 @@ movieSearchButton.addEventListener("click", function () {
       });
     });
 });
-
