@@ -31,3 +31,25 @@ h2.logo {
     width: 150px; /* Adjust the width as needed */
     margin-right: 10px; /* Add some spacing to separate it from the search bar */
 }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.genre-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.movie-list {
+    list-style-type: none;
+}
+
+.movie-list li {
+    margin-bottom: 10px;
+}
