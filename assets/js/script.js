@@ -239,4 +239,3 @@ movieSearchButton.addEventListener("click", function () {
       });
     });
 });
-
