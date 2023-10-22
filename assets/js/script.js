@@ -1,6 +1,6 @@
 // nick youtube api key: AIzaSyBWrhCB3guqUxUZxZX8HvCsGdb9BwsCyU0
 // nick tmdb api key: 2ed376b49026ee5ba769954152774c28
-// madison youtube api key:
+// madison youtube api key:AIzaSyBOVuYX_z7sZzI8Ehjp-EJIUBd2qdpztK0
 
 
 var tmdbAPI = "2ed376b49026ee5ba769954152774c28";
@@ -13,6 +13,7 @@ var modalCard = document.getElementById("modal-card");
 var movieTitle = document.getElementById("movie-title");
 var moviePlot = document.getElementById("movie-plot");
 var movieImg = '../assets/images/dummy.png'
+var genreCard = document.getElementById("genre-container")
 
 // Function to open a modal
 function openModal($el) {
@@ -94,6 +95,11 @@ function modalDisplay(modalData) {
 }
 
 movieSearchButton.addEventListener("click", function () {
+
+  if (genreCard) {
+    genreCard.style.display = "none";
+  }
+
   // user's input from search
   var movieInputValue = movieInput.value;
 
