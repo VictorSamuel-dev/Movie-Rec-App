@@ -15,7 +15,7 @@ var modalVideo = document.getElementById("video-container");
 var modalCard = document.getElementById("modal-card");
 var movieTitle = document.getElementById("movie-title");
 var moviePlot = document.getElementById("movie-plot");
-var movieImg = '../assets/images/dummy.png'
+// var movieImg = '../assets/images/dummy.png'
 var genreCard = document.getElementById("genre-container")
 
 // Function to open a modal
@@ -127,18 +127,20 @@ movieSearchButton.addEventListener("click", function () {
       data.results.forEach(function (data) {
         var movieTitle = data.title;
         var moviePoster = data.poster_path;
+        var vote_average = data.vote_average;
+        var overview = data.overview
 
         var movieDiv = document.createElement("div");
         movieDiv.classList.add("col-md-4");
 
         var posterBaseURL = "https://image.tmdb.org/t/p/w200";
         var moviePosterURL = posterBaseURL + moviePoster;
-        var img = document.createElement('img')
-        img.src = moviePosterURL 
-        img.alt = movieTitle
-        img.onerror = function() {
-          this.src = movieImg
-        }
+        // var img = document.createElement('img')
+        // img.src = moviePosterURL 
+        // img.alt = movieTitle
+        // img.onerror = function() {
+        // //   this.src = movieImg
+        // }
         
 
 
@@ -150,20 +152,31 @@ movieSearchButton.addEventListener("click", function () {
         movieDiv.setAttribute("data-modal-title", modalData.title);
         movieDiv.setAttribute("data-modal-plot", modalData.plot);
 
-        var movieCard = `
-          <div class="movie-card" data-modal-data='${JSON.stringify(
-            modalData
-          )}'>
-            <div class="card">
-              <div class="card-header js-modal-trigger" data-target="modal-card">${movieTitle}</div>
-              <div class="card-body">
-                <p class="moviePoster"> <img src="${moviePosterURL}" alt="${movieTitle} Poster"></p>
-              </div>
-            </div>
-          </div>
-        `;
+        // const movieEl = document.createElement('div');
+        movieDiv.classList.add('movie');
+        movieDiv.innerHTML = `
+                <img src="${moviePoster ? moviePosterURL : "./assets/images/dummy.png"}" alt="${movieTitle}">
 
-        movieDiv.innerHTML = movieCard;
+                <div class="movie-info">
+                    <h3 class="js-modal-trigger card-header" data-target="modal-card">${movieTitle}</h3>
+                    <span class="${getColor(vote_average)}">${vote_average}</span>
+                </div>
+                   `
+
+        // var movieCard = `
+        //   <div class="movie-card" data-modal-data='${JSON.stringify(
+        //     modalData
+        //   )}'>
+        //     <div class="card">
+        //       <div class="card-header js-modal-trigger" data-target="modal-card">${movieTitle}</div>
+        //       <div class="card-body">
+        //         <p class="moviePoster"> <img src="${moviePosterURL}" alt="${movieTitle} Poster"></p>
+        //       </div>
+        //     </div>
+        //   </div>
+        // `;
+
+        // movieDiv.innerHTML = movieEl;
         movieContainer.appendChild(movieDiv);
 
         movieDiv.addEventListener("click", function (event) {
