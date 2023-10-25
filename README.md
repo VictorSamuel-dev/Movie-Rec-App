@@ -14,7 +14,7 @@
 
 
 # Applications Plug-ins:
-- Bulma
+- [Bulma](https://bulma.io/documentation/components/modal/)
 - JavaScript
 - HTML
 - CSS
